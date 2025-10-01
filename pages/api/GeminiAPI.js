@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
     // ✅ Choose the model you want (gemini-1.5-flash is fast & free tier friendly)
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     // ✅ Generate response
     const result = await model.generateContent(prompt);
